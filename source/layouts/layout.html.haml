@@ -1,0 +1,96 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{charset: "utf-8"}
+    %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta(name="viewport" content="width=device-width, initial-scale=1")
+    -# %link{:href => "../../favicon.ico", :rel => "icon"}/
+    - if current_page.data.title
+      %title #{current_page.data.title} - Cider-Ci Documentation
+    - else
+      %title Madek API Docs
+    = stylesheet_link_tag "app"
+    = javascript_include_tag "vendor"
+    = javascript_include_tag "app"
+
+  %body#the-madek-api-documentation
+
+    .container
+
+      %nav.navbar.navbar-inverse
+        .container-fluid
+          .navbar-header
+            = link_to "/index.html", class: "navbar-brand" do
+              Madek API Documentation
+          %ul.nav.navbar-nav
+            %li
+              = link_to '/authentication/index.html' do
+                Authentication
+            %li
+              = link_to '/content-types/index.html' do
+                Content-Types
+            %li
+              = link_to '/resources/index.html' do
+                Resources
+            %li
+              = link_to '/sitemap.html' do
+                Sitemap
+
+      :ruby
+        @current_path_children = []
+        @current_node = {}
+
+        @current_path_with_root= "/" + current_path
+
+        def find_sitemap_path(parent_nodes, current_node)
+          nodes = parent_nodes + [current_node.select{|k,v| %w(path title).include? k}]
+          path_children = nodes.map{|pi| pi['path']}
+          possible_path_respresentations = [path_children.join(''), (path_children  + ["index.html"]).join('')]
+          if possible_path_respresentations.include? @current_path_with_root
+            @nodes = nodes
+            @current_node  = current_node
+          else
+            if current_node['children']
+              current_node['children'].map do |node|
+                find_sitemap_path(nodes, node)
+              end
+            end
+          end
+        end
+
+        def path_for_breadcrumbs segments
+          joined = segments.join
+          path =if joined =~ /^.*\/$/
+                  joined + "index.html"
+                else
+                  joined
+                end
+          path
+        end
+
+        find_sitemap_path([], data['site_map'])
+        # reduce would be nicer
+        @path_prefix = []
+
+      .row
+        .col-md-6
+          -if @nodes.present?
+            %ol.breadcrumb
+              - @nodes.each do |node|
+                - @path_prefix << node['path']
+                %li
+                  = link_to path_for_breadcrumbs(@path_prefix)  do
+                    = node['title'] || node['path']
+        .col-md-6
+          - if @current_node['children']
+            %ol.breadcrumb.with-circle-separator
+              - @current_node['children'].reject{|i| i['omit_child_link']}.each do |child|
+                %li
+                  = link_to path_for_breadcrumbs(@path_prefix + [child['path']]) do
+                    = child['title'] || child['path']
+
+      .content{class: current_page.data.classes || ""}
+
+
+        = yield
+

@@ -1,0 +1,26 @@
+path: '/'
+title: Home
+children:
+
+- path: authentication/
+  title: Authentication
+  children: []
+
+- path: content-types/
+  title: Content-Types
+  children: []
+
+
+- path: resources/
+  title: Resources
+  children:
+  - path: root.html
+    title: Root
+  - path: media-entries.html
+    title: Media-Entries
+
+- path: 'sitemap.html'
+  title: Sitemap
+  omit_child_link: true
+
+
