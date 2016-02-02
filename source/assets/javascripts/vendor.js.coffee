@@ -1,2 +1,3 @@
-#= require_tree ./vendor
+#= require bundle
 #= require bootstrap
+

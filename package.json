@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm install && ./node_modules/.bin/browserify -t coffeeify vendor.js.coffee -o source/assets/javascripts/vendor/bundle.js"
+    "build": "npm install && ./node_modules/.bin/browserify -t coffeeify vendor.js.coffee -o vendor/bundle.js"
   },
   "dependencies": {
     "http-proxy": "^1.8"
