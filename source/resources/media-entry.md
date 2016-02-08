@@ -10,5 +10,3 @@ Returns the properties of a Media-Entry. See also
 
   [MediaEntry]: https://madek.readthedocs.org/en/latest/entities/#mediaentry
 
-
-

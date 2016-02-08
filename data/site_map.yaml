@@ -20,10 +20,13 @@ children:
     title: Media-Entries
   - path: media-entry.html
     title: Media-Entry
+  - path: meta-data.html
+    title: Meta-Data
+  - path: meta-datum.html
+    title: Meta-Datum
 
 
 - path: 'sitemap.html'
   title: Sitemap
   omit_child_link: true
-
 
