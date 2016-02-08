@@ -7,7 +7,7 @@ children:
   children: []
 
 - path: content-types/
-  title: Content-Types
+  title: Content Types
   children: []
 
 
@@ -18,6 +18,9 @@ children:
     title: Root
   - path: media-entries.html
     title: Media-Entries
+  - path: media-entry.html
+    title: Media-Entry
+
 
 - path: 'sitemap.html'
   title: Sitemap
