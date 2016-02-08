@@ -24,6 +24,14 @@ children:
     title: Meta-Data
   - path: meta-datum.html
     title: Meta-Datum
+  - path: meta-key.html
+    title: Meta-Key
+  - path: meta-keys.html
+    title: Meta-Keys
+  - path: vocabularies.html
+    title: Vocabularies
+  - path: vocabulary.html
+    title: Vocabulary
 
 
 - path: 'sitemap.html'
