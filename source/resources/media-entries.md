@@ -24,28 +24,65 @@ which are "children" of that [Collection]. See also [Collection in the Madek doc
 
 #### `filter_by`
 
-TODO Matus
+| value                   | required   |
+| ------------            | ---------- |
+| JSON encoded as string  | no         |
+{: .table.table-striped}
+
+The value, JSON encoded string, filters those Media-Entries which satisfy the given filter conditions.
+
+The specification of the filter value is documented under [Filters in the Madek documentation].
+
+  [Filters in the Madek documentation]: https://madek.readthedocs.org/en/latest/filters/
 
 #### `me_get_full_size`
 
-TODO Matus
+| value                   | required   |
+| ------------            | ---------- |
+| boolean (true/false)    | no         |
+{: .table.table-striped}
+
+The value, boolean true/false, filters those Media-Entries for which the authenticated entity is allowed to download the [Media-File].
 
 #### `me_get_metadata_and_previews`
 
-TODO Matus
+| value                   | required   |
+| ------------            | ---------- |
+| boolean (true/false)    | no         |
+{: .table.table-striped}
+
+The value, boolean true/false, filters those Media-Entries for which the authenticated entity is allowed to view the [Meta-Data] and [Previews] of the [Media-File].
+
+  [Media-File]: /resources/media-file.md
+  [Meta-Data]: /resources/meta-data.md
+  [Previews]: /resources/previews.md
 
 #### `order`
 
-TODO Matus
+| value                   | required   |
+| ------------            | ---------- |
+| string ("asc"/"desc")   | no         |
+{: .table.table-striped}
+
+The value, string "asc" or "desc", orders the Media-Entries according to their creation date either in the ascending or descending manner. The default is the descending one.
 
 #### `public_get_full_size`
 
-TODO Matus
+| value                   | required   |
+| ------------            | ---------- |
+| boolean (true/false)    | no         |
+{: .table.table-striped}
+
+The value, boolean true/false, filters those Media-Entries for which the public is allowed to download the [Media-File].
 
 #### `public_get_metadata_and_previews`
 
-TODO Matus
+| value                   | required   |
+| ------------            | ---------- |
+| boolean (true/false)    | no         |
+{: .table.table-striped}
+
+The value, boolean true/false, filters those Media-Entries for which the public is allowed to view the [Meta-Data] and [Previews] of the [Media-File].
 
   [Collection]: /resources/collection.md
   [Collection in the Madek documentation]: https://madek.readthedocs.org/en/latest/entities/#collection
-
