@@ -4,5 +4,5 @@
   end.reject do |r|
   end
 
-- @pages.each do |p|
+- @pages.sort_by{|p| p.destination_path}.each do |p|
   #{p.destination_path}
