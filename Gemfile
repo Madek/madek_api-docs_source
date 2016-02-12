@@ -22,8 +22,10 @@ gem 'bootswatch-sprockets', "~> 1.0"
 
 
 gem 'capybara'
+gem 'poltergeist'
 gem 'rspec'
 gem 'selenium-webdriver'
+
 
 gem 'rspec_website_helpers', "= 0.2.0"
 # gem 'rspec_website_helpers', path: '/Users/thomas/Programming/ROR/rspec_website_helpers'

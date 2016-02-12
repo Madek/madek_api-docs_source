@@ -1,0 +1,81 @@
+ports:
+  MIDDLEMAN_PORT:
+    inet_address: "localhost"
+    min: 8000
+    max: 8999
+  XVNC_PORT:
+    inet_address: "localhost"
+    min: 5900
+    max: 5999
+
+environment-variables:
+  LANG: "en_US.UTF-8"
+  API_DOCS_CONTEXT: /
+  REVERSE_PROXY_HTTP_PORT: '{{MIDDLEMAN_PORT}}'
+  DISPLAY: ":{{XVNC_PORT}}"
+
+git-options:
+  submodules:
+    clone: True
+    timeout: 30
+
+scripts:
+
+  show-env:
+    body: env | sort
+
+  bundle:
+    body: bundle
+
+  start-middleman:
+    body: bundle exec middleman -p ${MIDDLEMAN_PORT}
+    start-when:
+      - script: bundle
+    terminate-when:
+      - script: shutdown-middleman
+        states: [aborted, failed, skipped]
+
+  middleman-is-serving:
+    timeout: 30 seconds
+    start-when:
+      - script: start-middleman
+        states: [executing]
+    body: |
+      #!/usr/bin/env bash
+      set -ux
+      until curl --silent --fail -I "http://localhost:${MIDDLEMAN_PORT}${API_DOCS_CONTEXT}" ; do
+        sleep 1;
+      done
+
+  test:
+    start-when:
+      - script: bundle
+      - script: middleman-is-serving
+      - script: start-xvnc
+    body:
+      bundle exec rspec
+
+  shutdown-middleman:
+    start-when:
+      - script: test
+        states: [aborted, passed, failed, skipped]
+    body:
+      kill -TERM $(lsof -t -i:${MIDDLEMAN_PORT})
+
+
+  start-xvnc:
+    body: |
+      #!/usr/bin/env bash
+      set -eux
+      tightvncserver "${DISPLAY}"  -geometry 1024x768 -rfbport "$XVNC_PORT"  -interface '0.0.0.0'
+
+  stop-xvnc:
+    body: |
+      #!/usr/bin/env bash
+      set -eux
+      tightvncserver -kill "${DISPLAY}" -clean
+    ignore-abort: true
+    ignore-state: true
+    start-when:
+    - script: test
+      states: [aborted, passed, failed, skipped]

@@ -1,6 +1,7 @@
 require 'capybara/rspec'
 require 'active_support/all'
 require 'selenium-webdriver'
+require 'capybara/poltergeist'
 require 'pry'
 require 'logger'
 
@@ -27,6 +28,12 @@ RSpec.configure do |config|
 
   PORT= ENV['REVERSE_PROXY_HTTP_PORT'].presence || 3100
   HOST="http://localhost:#{PORT}"
+
+
+  Capybara.register_driver :poltergeist do |app|
+    Capybara::Poltergeist::Driver.new(app, js_errors: false)
+  end
+
 
   Capybara.current_driver = :selenium
   Capybara.app_host = HOST

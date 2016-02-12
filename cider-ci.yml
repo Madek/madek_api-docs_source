@@ -1,0 +1,10 @@
+jobs:
+  test:
+    run-on:
+      - type: branch
+        include-match: ^.*$
+    script-defaults:
+      template-environment-variables: true
+    task:
+      _cider-ci_include: cider-ci/test-task.yml
+
