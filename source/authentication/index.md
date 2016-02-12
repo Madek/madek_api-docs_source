@@ -60,7 +60,7 @@ API-Browser with authentication once singed in.
   [ApiClient]: https://madek.readthedocs.org/en/latest/entities/#apiclient
   [RFC2617]: https://tools.ietf.org/html/rfc2617
   [User]: https://madek.readthedocs.org/en/latest/entities/#user
-  [Wikipedia: Basic access authentication]: https://en.wikipedia.org/wiki/Basic_access_authenticatio://en.wikipedia.org/wiki/Basic_access_authentication
+  [Wikipedia: Basic access authentication]: https://en.wikipedia.org/wiki/Basic_access_authentication
   [root-resource]: /resources/root.html
 
 

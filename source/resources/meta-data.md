@@ -18,5 +18,5 @@ While this collection is not paginated at the moment it might be in the future.
 | array of strings, each representing a Meta-Key ID | no         |
 {: .table.table-striped}
 
-The returned collection will only include those MetaData wich MetaKeys are
+The returned collection will only include those MetaData which MetaKeys are
 provided. If his parameter is not given all MetaData are returned.

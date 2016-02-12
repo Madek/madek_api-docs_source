@@ -15,6 +15,6 @@ Returns a [Meta-Key](meta-key.html) collection.
 {: .table.table-striped}
 
 The value of this query parameter will be used to restrict the Meta-Keys to
-those which belog to the [Vocabulary] of equal id.
+those which belong to the [Vocabulary] of equal id.
 
   [Vocabulary]: vocabulary.html

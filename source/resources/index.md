@@ -1,6 +1,6 @@
 # Resources
 
-See the page [Content Types](/content-types/) for the content encoding
+See the page [Content Types](../content-types/) for the content encoding
 of the resources.
 
 Follow the links on top, right for the documentation of a particular resource.

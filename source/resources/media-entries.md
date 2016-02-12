@@ -53,9 +53,9 @@ The value, boolean true/false, filters those Media-Entries for which the authent
 
 The value, boolean true/false, filters those Media-Entries for which the authenticated entity is allowed to view the [Meta-Data] and [Previews] of the [Media-File].
 
-  [Media-File]: /resources/media-file.md
-  [Meta-Data]: /resources/meta-data.md
-  [Previews]: /resources/previews.md
+  [Media-File]: media-file.html
+  [Meta-Data]: meta-data.html
+  [Previews]: previews.html
 
 #### `order`
 
@@ -84,5 +84,5 @@ The value, boolean true/false, filters those Media-Entries for which the public 
 
 The value, boolean true/false, filters those Media-Entries for which the public is allowed to view the [Meta-Data] and [Previews] of the [Media-File].
 
-  [Collection]: /resources/collection.md
+  [Collection]: collection.html
   [Collection in the Madek documentation]: https://madek.readthedocs.org/en/latest/entities/#collection
