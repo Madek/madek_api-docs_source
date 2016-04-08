@@ -3,7 +3,7 @@
 
 ## `GET`
 
-Returns a [Meta-Key](meta-key.html) collection.
+Returns a [Meta-Key](meta-key.html) collection. The collection is scoped by public meta-keys by default, where joined `vocabularies.enabled_for_public_view = TRUE`.
 
 ### Query Parameters
 

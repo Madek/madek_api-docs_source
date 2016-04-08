@@ -29,11 +29,12 @@ which are "children" of that [Collection]. See also [Collection in the Madek doc
 | JSON encoded as string  | no         |
 {: .table.table-striped}
 
-The value, JSON encoded string, filters those Media-Entries which satisfy the given filter conditions.
+The value, JSON encoded string, filters those Media-Entries which satisfy the given filter conditions. Only that meta_data is searched, where the respective meta_keys belong to public vocabularies, where `enabled_for_public_view = TRUE`.
 
 The specification of the filter value is documented under [Filters in the Madek documentation].
 
-  [Filters in the Madek documentation]: https://madek.readthedocs.org/en/latest/filters/
+
+  [Filters in the Madek documentation]: https://madek.readthedocs.org/en/latest/architecture/resource_filters/
 
 #### `me_get_full_size`
 
@@ -85,4 +86,4 @@ The value, boolean true/false, filters those Media-Entries for which the public 
 The value, boolean true/false, filters those Media-Entries for which the public is allowed to view the [Meta-Data] and [Previews] of the [Media-File].
 
   [Collection]: collection.html
-  [Collection in the Madek documentation]: https://madek.readthedocs.org/en/latest/entities/#collection
+  [Collection in the Madek documentation]: https://madek.readthedocs.org/en/latest/architecture/entities/#collection
