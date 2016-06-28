@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 
 gem "pry"
+gem "bundler"
 
 gem "middleman", "~>3.3.7"
 #gem "middleman" , path: "/Users/thomas/Programming/ROR/middleman"
