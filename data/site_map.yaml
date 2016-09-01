@@ -16,6 +16,12 @@ children:
   children:
   - path: root.html
     title: Root
+  - path: collections.html
+    title: Collections
+  - path: collection.html
+    title: Collection
+  - path: filter-sets.html
+    title: Filter-Sets
   - path: media-entries.html
     title: Media-Entries
   - path: media-entry.html
