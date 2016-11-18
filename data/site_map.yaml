@@ -20,6 +20,10 @@ children:
     title: Collections
   - path: collection.html
     title: Collection
+  - path: collection-media-entry-arc.html
+    title: Collection-Media-Entry-Arc
+  - path: collection-media-entry-arcs.html
+    title: Collection-Media-Entry-Arcs
   - path: filter-sets.html
     title: Filter-Sets
   - path: media-entries.html
