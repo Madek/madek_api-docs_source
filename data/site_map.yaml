@@ -26,10 +26,16 @@ children:
     title: Collection-Media-Entry-Arcs
   - path: filter-sets.html
     title: Filter-Sets
+  - path: groups.html
+    title: Groups
+  - path: group-users.html
+    title: Group-Users
   - path: media-entries.html
     title: Media-Entries
   - path: media-entry.html
     title: Media-Entry
+  - path: media-file.html
+    title: Media-File
   - path: meta-data.html
     title: Meta-Data
   - path: meta-datum.html
@@ -38,11 +44,20 @@ children:
     title: Meta-Key
   - path: meta-keys.html
     title: Meta-Keys
+  - path: person.html
+    title: Person
+  - path: people.html
+    title: People
+  - path: previews.html
+    title: Previews
+  - path: user.html
+    title: User
+  - path: users.html
+    title: Users
   - path: vocabularies.html
     title: Vocabularies
   - path: vocabulary.html
     title: Vocabulary
-
 
 - path: 'sitemap.html'
   title: Sitemap
