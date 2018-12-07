@@ -50,6 +50,10 @@ children:
     title: People
   - path: previews.html
     title: Previews
+  - path: role.html
+    title: Role
+  - path: roles.html
+    title: Roles
   - path: user.html
     title: User
   - path: users.html
