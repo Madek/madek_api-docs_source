@@ -6,7 +6,7 @@
 Returns a subset of the properties of a Media-File. This includes
 the following keys:
 
-* `created_at
+* `created_at`,
 * `filename`,
 * `media_entry_id`, and
 * `size`.
