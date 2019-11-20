@@ -1,4 +1,18 @@
-# Media-File
+# Media-File `/media-files/{id}`
 
-TODO
+{: #get}
+## `GET`
 
+Returns a subset of the properties of a Media-File. This includes
+the following keys:
+
+* `created_at
+* `filename`,
+* `media_entry_id`, and
+* `size`.
+
+See also [MediaFile] in the Madek documentation.
+
+**Warning:** this part of the API might change in the future.
+
+  [MediaFile]: https://madek.readthedocs.org/en/latest/architecture/entities/#mediafile
