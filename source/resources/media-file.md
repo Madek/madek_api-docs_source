@@ -6,8 +6,10 @@
 Returns a subset of the properties of a Media-File. This includes
 the following keys:
 
+* `content_type`,
 * `created_at`,
 * `filename`,
+* `media_type`,
 * `media_entry_id`, and
 * `size`.
 
