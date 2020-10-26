@@ -60,12 +60,21 @@ The value, boolean true/false, filters those Media-Entries for which the authent
 
 #### `order`
 
-| value                   | required   |
-| ------------            | ---------- |
-| string ("asc"/"desc")   | no         |
+| value                                                                                    | required   |
+| ------------                                                                             | ---------- |
+| string for sorting by date ("asc"/"desc")                                                | no         |
+| string for sorting by title ("title_asc"/"title_desc")                                   | no         |
+| string for sorting by last change ("last_change")                                        | no         |
+| string for sorting by Media Entry's position in Collection ("manual_asc"/"manual_desc")  | no         |
+| string for sorting by Collection display settings ("stored_in_collection")               | no         |
 {: .table.table-striped}
 
 The value, string "asc" or "desc", orders the Media-Entries according to their creation date either in the ascending or descending manner. The default is the descending one.
+
+The value orders the Media Entries according to the table above, either **asc**ending or **des**cending.
+If value "manual_asc", "manual_desc" or "stored_in_collection" is specified, the `collection_id` is required.
+"stored_in_collection" value stands for the order saved in the collection display settings (e.g. it will be the same as in the Web-UI).
+
 
 #### `public_get_full_size`
 

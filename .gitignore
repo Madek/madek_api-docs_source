@@ -4,5 +4,5 @@ build/
 node_modules/
 source/assets/javascripts/vendor/
 tmp/
-
-
+.ruby-version
+.ruby-gemset

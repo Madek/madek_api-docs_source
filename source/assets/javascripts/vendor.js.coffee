@@ -1,3 +1,1 @@
-#= require bundle
 #= require bootstrap
-

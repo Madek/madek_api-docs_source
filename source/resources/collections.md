@@ -36,15 +36,12 @@ The value, boolean true/false, filters those Collections for which the authentic
 
 #### `order`
 
-| value                                                                  | required   |
-| ------------                                                           | ---------- |
-| string for sorting by date ("asc"/"desc")                              | no         |
-| string for sorting by (Media Entry) title ("title_asc"/"title_desc")   | no         |
-| string for sorting by last change ("last_change")                      | no         |
+| value                   | required   |
+| ------------            | ---------- |
+| string ("asc"/"desc")   | no         |
 {: .table.table-striped}
 
-The value orders the Collections according to the table above, either **asc**ending or **des**cending.
-If ommited, and `collection_id` is set, the order saved in the collection display settings is applied (e.g. it will be the same as in the Web-UI).
+The value, string "asc" or "desc", orders the Collections according to their creation date either in the ascending or descending manner. The default is the descending one.
 
 #### `public_get_metadata_and_previews`
 
