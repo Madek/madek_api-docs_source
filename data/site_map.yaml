@@ -24,8 +24,6 @@ children:
     title: Collection-Media-Entry-Arc
   - path: collection-media-entry-arcs.html
     title: Collection-Media-Entry-Arcs
-  - path: filter-sets.html
-    title: Filter-Sets
   - path: groups.html
     title: Groups
   - path: group-users.html
